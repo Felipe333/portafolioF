@@ -1,0 +1,23 @@
+{
+  "name": "portafolioF",
+  "version": "1.0.0",
+  "description": "este es el portafolio de Felipe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felipe333/portafolioF.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Felipe333/portafolioF/issues"
+  },
+  "homepage": "https://github.com/Felipe333/portafolioF#readme",
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}
