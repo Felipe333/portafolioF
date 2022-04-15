@@ -1,0 +1,32 @@
+body {
+    background-color: $color-primario;
+    color: $color-secundario; 
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.mainContainer{
+    // template for main container 2 columns and auto rows, the rows use 100% height
+    display: grid;
+    grid-auto-rows: 100vh; 
+    grid-template-columns: 100px auto;
+
+}
+
+.home{
+  @include background;
+}
+
+.aboutMe{
+    @include background;
+}
+
+.skills{
+    @include background;
+}
+
+.contact{
+    @include background;
+}

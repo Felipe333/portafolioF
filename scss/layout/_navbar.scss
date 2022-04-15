@@ -1,0 +1,225 @@
+// Device xl 
+@include deviceSize(xl){
+        
+.navbar{
+
+    @include navbar(110px); // width for navbar
+    .head{
+                        // Font-family, font Size, color
+        @include text($fontTitle, 7px, $color-primario);  
+        @include head; //title
+    }
+}
+.navOptions
+{
+    
+    grid-row-start: 2; //the content start in the second row 
+    grid-template-rows: repeat(4, 1fr);   
+    z-index: 0; //for hover position
+    position: relative;
+
+    .option{
+        border: 1px solid $color-tercero;
+        border-width: 1px 0;
+        position: relative;
+        overflow: hidden;
+        @include effectHoverNavbar; 
+       
+        .icon
+        {
+            @include iconStyle(47px, 47px); //width and height
+            position: relative;
+            z-index: 1;
+        }
+
+        // icons text
+        span
+        {
+            @include text($fontSubTitle, 15px, $color-primario);
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    }
+    .iconContact{
+
+        // icon contact
+        display: grid;
+        grid-template-columns: 1fr; //i will add more colums and rows for contacts
+        grid-row-start: 3;
+        margin: auto;
+        @include iconStyle(30px, 30px);
+    }
+}
+
+// Device xl end
+
+@include deviceSize(lg){
+
+.navbar{
+    @include navbar(100px); // width for navbar
+    .head{
+        @include text($fontTitle, 8px, $color-primario);   // Font-family, font Size, color
+        @include head; //title
+    }
+}
+
+.navOptions
+{
+    grid-row-start: 2; //the content start in the second row
+    grid-template-rows: repeat(4, 1fr);   
+    z-index: 0; //for hover position
+    position: relative;
+
+    .option{
+        padding: 7px;
+        border: 1px solid $color-tercero;
+        border-width: 1px 0;
+        position: relative;
+        overflow: hidden;
+        @include effectHoverNavbar;
+       
+        .icon
+        {
+            @include iconStyle(60px, 60px); //width and height
+            position: relative;
+            z-index: 1;
+        }
+        // icons text
+        span
+        {
+            @include text($fontSubTitle, 1rem, $color-primario);
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    }
+    .iconContact{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-start: 3;
+        align-items: center;
+        justify-content: justify;
+
+        p{
+            text-align: center;
+            background-color: red;
+        }
+        section{
+            img{
+                height: 25px;
+                width: 25px; 
+            
+            }
+        }
+    }
+
+}
+
+@include deviceSize(md){
+
+
+.navbar{
+
+    @include navbar(100px); //width for navbar
+    .head{
+        @include text($fontTitle, 7px, $color-primario);  // Font-family, font Size, color
+        @include head;//title
+    }
+}
+
+.navOptions
+{
+    grid-row-start: 2; //the content start in the second row
+    grid-template-rows: repeat(4, 1fr);   
+    z-index: 0;   //for hover position
+    position: relative;
+
+    .option{
+        
+        border: 1px solid $color-tercero;
+        border-width: 1px 0;
+        position: relative;
+        overflow: hidden;
+        @include effectHoverNavbar;
+       
+        .icon
+        {
+            @include iconStyle(47px, 47px); //width and height
+            position: relative;
+            z-index: 1;
+        }
+
+        // icons text
+        span
+        {
+            @include text($fontSubTitle, 15px, $color-primario);
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    }
+
+    .iconContact{
+        display: grid;
+        grid-template-columns: 1fr; //i will add more colums and rows for contacts
+        grid-row-start: 3;
+        margin: auto;
+        @include iconStyle(30px, 30px);
+    }
+}
+
+@include deviceSize(sm)
+{
+     
+.navbar{
+    @include navbar(100px);
+    .head{
+        @include text($fontTitle, 7px, $color-primario);  
+        @include head;
+    }
+}
+
+.navOptions
+{
+    grid-row-start: 2;
+    grid-template-rows: repeat(4, 1fr);   
+    z-index: 0;
+    position: relative;
+
+    .option{
+        
+        border: 1px solid $color-tercero;
+        border-width: 1px 0;
+        position: relative;
+        overflow: hidden;
+        @include effectHoverNavbar;
+       
+        .icon
+        {
+            @include iconStyle(47px, 47px);
+            position: relative;
+            z-index: 1;
+        }
+
+        span
+        {
+            @include text($fontSubTitle, 15px, $color-primario);
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    }
+    .iconContact{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-start: 3;
+        margin: auto;
+        @include iconStyle(30px, 30px);
+    }
+    
+}

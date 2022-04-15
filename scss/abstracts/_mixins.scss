@@ -1,0 +1,143 @@
+// Breakpoints
+
+// min Width
+$breakpointsMin:(
+    sm: 100px,
+    md: 720px,
+    lg: 1380px,
+    xl: 1960px
+
+);
+
+// max Width
+$breakpointsMax:(
+    sm: 720px,
+    md: 1380px,
+    lg: 1960px,
+    xl: 2400px
+);
+
+@mixin deviceSize($breakpoint) {
+    @media screen and(min-width: map-get($breakpointsMin,$breakpoint))
+    and(max-width: map-get($breakpointsMax,$breakpoint)){
+        @content;
+        
+    }  
+     }
+
+// End breakpoints
+
+// Navbar
+@mixin navbar($width) {
+
+    // all styles elements for navbar space 
+    color: $color-primario;
+    display: grid;
+    position: fixed;
+    grid-template-rows: repeat(3,1fr);
+    grid-row: 1/-1; //this use since the first row until last row
+    height: 100%;
+    width: $width;
+    text-align: center;
+    background-image: linear-gradient( 89.7deg,  rgba(0,0,0,1) -10.7%, rgba(53,92,125,1) 88.8% );
+    border-right: 3px inset #05DBF2 ;
+    box-shadow: 7px 1px 17px rgba(#05DBF2, 0.2);
+}
+
+// effect navbar
+@mixin effectHoverNavbar {
+
+    .navOptions{
+        border: 1px solid $color-tercero;
+        border-width: 1px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    &:hover{
+        transition: all 0.7s ease;
+        transform: scale(1.12);
+        border-radius: 6%;
+        box-shadow: 20px 1px 20px rgba(#05DBF2, 0.2);        
+    }
+    // div for effect of navbar
+    .backgroundHover{
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: -150px;
+        background: $color-tercero;
+        border-radius: 100%;
+        transition: all 0.7s ease;
+    }
+    &:hover .backgroundHover{
+        width: 200px;
+        height: 200px;
+        top: -65px;
+        left: -65px;
+    }
+}
+
+// title 
+@mixin head {
+
+    margin-top: 10px;
+        text-transform: uppercase;
+        border-bottom: 4px double $color-tercero;
+        border-width: 6px 0;
+        position: absolute;
+        
+        .title {
+            // title effect 
+            background-image: linear-gradient(45deg, $color-primario, $color-tercero);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            animation: gradient 20s linear infinite 1s;
+            
+        }
+
+        //title motion effect 
+
+        @keyframes gradient {
+            0%{
+                background-position: 0 0;
+            }
+            50%{
+                background-position: -50rem 0;
+            }
+            100%{
+                background-position: 0 0;
+            }
+        }
+    
+}
+
+// end navbar
+
+
+// font Styles
+@mixin text($font, $fontSize, $fontColor) {
+    text-align: center;
+    font-family: $font;
+    font-size: $fontSize;
+    color: $fontColor;
+}
+
+// icon Styles
+@mixin iconStyle($width, $height) {
+    height: $height;
+    width: $width;
+    text-align: center;
+}
+
+// background for content
+@mixin background {
+
+    // all contant start in the second column 
+    grid-column-start: 2;
+    // background: linear-gradient(to right, #232526, #414345);
+    background-image: linear-gradient( 176.7deg,  rgba(0,0,0,1) -10.7%, rgba(53,92,125,1) 88.8% );
+    border-bottom: 2px #05DBF2 solid;
+    box-shadow: 7px 1px 20px rgba(#05DBF2, 0.2);
+}
